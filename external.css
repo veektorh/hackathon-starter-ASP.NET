@@ -1,0 +1,28 @@
+﻿body {
+    background: whitesmoke;
+}
+
+.body {
+    background: white;
+    width: 500px;
+    padding: 25px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    display:inline-block;
+}
+
+.profileImage{
+    border: 1px solid black;
+    height:150px;
+    overflow:auto;
+}
+
+.radBtn{
+    margin: 5px;
+}
+
+.Profileinfo{
+    margin:10px;
+}

@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="hackathon_starter_asp_webforms.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale = 1" />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/Default.aspx"><span style=" margin-right:10px;" class="glyphicon glyphicon-eye-open"></span>Project name</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav ">
+                            <li class="active"><a href="Default.aspx">Home</a></li>
+                            <li><a href="contact.aspx">Contact</a>  </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li id="registerLink" runat="server"><a href="register.aspx">Register</a></li>
+                            <li id="loginLink" runat="server"><a href="login.aspx">Login</a></li>
+                            <li id="userLink" runat="server" class="dropdown">
+                                <a runat="server" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <asp:Label Text="text" ID="lbluser" runat="server" /> <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li> <asp:LinkButton ID="accountLink" Text="My Account" runat="server" OnClick="accountLink_Click" /> </li>
+                                    <li> <asp:LinkButton ID="logoutLinkBtn" runat="server" OnClick="logoutLinkBtn_Click">Logout</asp:LinkButton></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </header>
+
+        
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer class="container">
+            <p> &copy; 2016 Company, Inc. All rights reserved </p>
+        </footer>
+    </form>
+</body>
+</html>
